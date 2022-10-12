@@ -16,7 +16,9 @@ import {NgxMaskModule, IConfig} from 'ngx-mask';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxCurrencyModule } from 'ngx-currency';
-
+import {ChartsModule} from 'ng2-charts';
+import { BarChartComponent } from './componente/bar-chart/bar-chart.component';
+import { UsuarioReportComponent } from './componente/usuario/usuario-report/usuario-report.component';
 
 
 export const appRouters: Routes = [
@@ -27,6 +29,8 @@ export const appRouters: Routes = [
   {path: 'userList', component: UsuarioComponent, canActivate: [GuardiaoGuard]},
   {path: 'usuarioAdd', component :UsuarioAddComponent, canActivate: [GuardiaoGuard]},
   {path: 'usuarioAdd/:id', component :UsuarioAddComponent, canActivate: [GuardiaoGuard]},
+  { path: 'chart', component: BarChartComponent, canActivate: [GuardiaoGuard] },
+  { path: 'userReport', component: UsuarioReportComponent, canActivate: [GuardiaoGuard] },
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
@@ -41,7 +45,9 @@ export const optionsMask : Partial<IConfig> | (() => Partial<IConfig>) = {};
     HomeComponent,
     LoginComponent,
     UsuarioComponent,
-    UsuarioAddComponent
+    UsuarioAddComponent,
+    UsuarioReportComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,8 @@ export const optionsMask : Partial<IConfig> | (() => Partial<IConfig>) = {};
     NgxMaskModule.forRoot(optionsMask), /** Utilizei a versão 11 do ngx, pois o projeto esta na versão 11 do angular */
     NgxPaginationModule, 
     NgbModule,
-    NgxCurrencyModule
+    NgxCurrencyModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

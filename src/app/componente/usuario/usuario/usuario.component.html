@@ -9,6 +9,8 @@
   <button type="button" (click)="consultarUser()"  class="btn btn-primary mb-2">Buscar</button>
 
   <button type="button" [routerLink]="['/usuarioAdd']" style="margin-left: 5px ;" class="btn btn-success mb-2">Novo</button>
+  
+  <button (click)="imprimeRelatorio()" type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary mb-2" style="margin-left: 5px;">PDF</button>
 
 </form>
 

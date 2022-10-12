@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppConstants } from '../app-constants';
+import { UserReport } from '../model/UserReport';
 
 @Injectable({
   providedIn: 'root'
@@ -82,4 +83,29 @@ userAutenticado() {
 removerTelefonte(id): Observable<any> {
   return this.http.delete(AppConstants.baseUrl + "removerTelefone/" + id, {responseType: 'text'});
 }
+
+
+
+downloadPdfRelatorio() {
+  return this.http.get(AppConstants.baseUrl + 'relatorio', { responseType: 'text' }).subscribe(data => {
+    document.querySelector('iframe').src = data;
+  });
+}
+
+
+
+  downloadPdfRelatorioParam(userreport : UserReport) {
+
+   return this.http.post(AppConstants.baseUrl + 'relatorio/', userreport , { responseType: 'text' }).subscribe(data => {
+     document.querySelector('iframe').src = data;
+   });
+}
+
+
+carregarGrafico() : Observable<any> {
+  return this.http.get(AppConstants.baseUrl + 'grafico');
+}
+
+
+
 }

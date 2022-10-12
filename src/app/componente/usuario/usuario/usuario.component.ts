@@ -57,7 +57,7 @@ consultarUser() {
   } else {
 
     this.usuarioService.consultarUser(this.nome).subscribe(data => {
-      this.students = data.content;
+      this.students = data.content ? data.content : data ;
       this.total = data.totalElements;
     });
   }
@@ -79,6 +79,10 @@ carregarPagina(pagina) {
     });
   }
 
+}
+
+imprimeRelatorio() {
+  return this.usuarioService.downloadPdfRelatorio();
 }
 
 }
