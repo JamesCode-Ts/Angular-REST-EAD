@@ -20,7 +20,7 @@ export class BarChartComponent implements OnInit {
       this.userChart = data;
 
       /*Nomes */
-      this.barChartLabels = this.userChart.nome.split(',');
+      this.barChartLabels = this.userChart.nome.replace(/[\\"]/g, '').split(',');
 
       /*Salario */
       var arraySalario = JSON.parse('[' + this.userChart.salario + ']');
