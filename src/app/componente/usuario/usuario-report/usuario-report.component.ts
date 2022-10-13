@@ -62,7 +62,7 @@ export class FormataData extends NgbDateParserFormatter {
 
 }
 
-
+/** Acrescenta um 0 na frente do número se o dado for diferente de vazio e <= 9 */
 function validarDia(valor) {
   if (valor.toString !== '' && parseInt(valor) <= 9) {
     return '0' + valor;

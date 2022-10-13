@@ -23,6 +23,8 @@ import { UsuarioReportComponent } from './componente/usuario/usuario-report/usua
 
 export const appRouters: Routes = [
 
+  /** Responsável pelas as rotas  */
+  
   {path : 'home', component : HomeComponent, canActivate: [GuardiaoGuard]},
   {path: 'login', component : LoginComponent},
   {path: '', component : LoginComponent},
