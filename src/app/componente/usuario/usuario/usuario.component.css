@@ -1,0 +1,44 @@
+
+
+
+
+@media  screen and (max-width: 700px){
+table { 
+    box-shadow: 2px 1px 2px 1px rgba(0,0,0,0.2);
+    margin-left: 1rem;
+    
+   
+    }
+
+
+    .form-inline{
+
+        margin-left: 1rem;
+    }
+
+  
+
+}
+
+
+
+
+@media  screen and (min-width: 710px){
+
+
+    table { 
+        box-shadow: 2px 1px 2px 1px rgba(0,0,0,0.2);
+        margin-left: 5rem;
+     
+       
+        }
+    
+    
+        .form-inline{
+    
+            margin-left: 4rem;
+        }
+    
+
+
+}

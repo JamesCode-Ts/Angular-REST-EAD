@@ -46,7 +46,9 @@ export class BarChartComponent implements OnInit {
   barChartPlugins = [];
 
   barChartData: ChartDataSets[] = [
-    { data: [], label: 'Salário Usuário' }
+    { data: [], label: 'Salário Usuário',
+    
+   }
   ];
 
 }
