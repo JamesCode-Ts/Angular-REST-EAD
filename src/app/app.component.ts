@@ -29,8 +29,8 @@ export class AppComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
-  /** Se o token existir no localStorege do navegador é porque teve 
-   * autentificação, com isso a barra tem que ser escondidada.
+  /** Se token existir no localStorege do navegador é porque teve
+   * autentificação, com isso a barra não deve ser escondidada.
    */
 public esconderBarra(){
   if(localStorage.getItem('token') !== null && 
@@ -38,7 +38,7 @@ public esconderBarra(){
   return false;
 
 }else{
-  /**Caso contrario, se não houve autenficação continua mostrando a barra. */
+  /**Caso contrario, senão houver autenficação esconde a barra. */
   return true;
 }
 

@@ -7,6 +7,12 @@ import { UserReport } from '../model/UserReport';
 @Injectable({
   providedIn: 'root'
 })
+
+
+/** O service é responsavel por fazer a conecção do back-end atravez de uma coneção
+ * já estabelecida no app-constans que são a base da comunicação, com essas funcões
+ * é possivel fazer a comunicação aos end-poits(métodos) do controller do back-and.
+ */
 export class UsuarioService {
 
   /**Implementação foi necessaria, pois as requisições não estavam 
@@ -18,6 +24,7 @@ export class UsuarioService {
   };
 
   constructor(private http: HttpClient) {}
+
 /**Estas funções vão se comunicar com os métodos do back-and, os end-pont no controller */
    getStudentList(): Observable<any> {    
     return this.http.get<any>(AppConstants.baseUrl, this.httpOptions);

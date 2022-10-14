@@ -8,6 +8,12 @@ import { UsuarioService } from 'src/app/service/usuario.service';
   templateUrl: './usuario.component.html',
   styleUrls: ['./usuario.component.css']
 })
+
+/** Os components são responsavel por fazer a comunicação e interação com a tela.
+ * Desse modo, tudo que é vindo da tela e passado para o service e por fim para o back-end 
+ * ou transmitido e vindo do back-end é feito por components.
+ */
+
 export class UsuarioComponent implements OnInit {
 
   students : Array<User[]>;
@@ -50,14 +56,21 @@ export class UsuarioComponent implements OnInit {
 consultarUser() {
 
   if (this.nome === '') {
-    this.usuarioService.getStudentList().subscribe(data => {
-      this.students = data.content;
+    this.usuarioService.getStudentList().subscribe(data => { /** O subscribe invoca e passa os dados do back-end para a variavel data. */
+      this.students = data.content; /** passa os dados os atributos da classe model de students */
       this.total = data.totalElements;
     });
   } else {
 
     this.usuarioService.consultarUser(this.nome).subscribe(data => {
-      this.students = data.content ? data.content : data ;
+      this.students = data.content ? data.content : data ; /** Condição tenária, 
+      if(data.content){
+        return data.content;
+        else{
+         return data;
+        }
+
+       */
       this.total = data.totalElements;
     });
   }

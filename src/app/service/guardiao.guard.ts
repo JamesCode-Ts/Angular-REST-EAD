@@ -6,6 +6,10 @@ import { UsuarioService } from './usuario.service';
 @Injectable({
   providedIn: 'root'
 })
+
+/** O Quardião serve para proteger as rotas, ou seja é uma questão de segurança.
+ * Por exemplo : para que não haja violação de acesso caso não tenha uma autenticação.
+ */
 export class GuardiaoGuard implements CanActivate {
 
 

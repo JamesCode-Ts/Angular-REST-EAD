@@ -16,6 +16,10 @@ export class BarChartComponent implements OnInit {
   userChart = new UserChart();
 
   ngOnInit(): void {
+
+    /**Ao alimentar os valores do bancd de dados para o gráfico é preciso
+     * Que os formatos das strings venham do formato que o gráfco aceite.
+     */
     this.usuaruoService.carregarGrafico().subscribe (data => {
       this.userChart = data;
 
