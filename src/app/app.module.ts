@@ -57,7 +57,7 @@ export const optionsMask : Partial<IConfig> | (() => Partial<IConfig>) = {};
     HttpClientModule,
     routes,
     HttpInterceptorModule,
-    NgxMaskModule.forRoot(optionsMask), /** Utilizei a versão 11 do ngx, pois o projeto esta na versão 11 do angular */
+    NgxMaskModule.forRoot(optionsMask), /** Utilizei a versão 11 do ngx, funcionou bem na versão 8 do angular */
     NgxPaginationModule, 
     NgbModule,
     NgxCurrencyModule,
