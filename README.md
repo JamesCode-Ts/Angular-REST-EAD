@@ -23,7 +23,7 @@ Gráfico de Sálario
 
 
 
-Tendo como base um sistema Java Web feito com o Spring Boot REST que pude implementar servindo como back-end. 
+Tendo como base um sistema Java Web feito com o Spring Boot REST que pude implementar servindo como back-end:
 https://github.com/JamesCode-Ts/API-em-Rest-com-Restful-EAD
 
 Tecnologias Utilizadas:
