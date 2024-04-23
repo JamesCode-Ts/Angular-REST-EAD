@@ -21,20 +21,64 @@ Gráfico de Sálario
 
 ![Grafico-salario](https://github.com/JamesCode-Ts/Angular-REST-EAD/assets/63932833/14392551-fe14-47bc-9b89-7600200351bf)
 
+### Para usar este projeto, siga estas etapas:
+
+1. Clone este repositório para o seu computador:
+
+```bash
+git clone https://github.com/JamesCode-Ts/Angular-REST-EAD
+```
+
+2. Baixa o script de instalação do Node.js
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+```
+
+3. Instala o Node.js (Node Package Manager).
+```bash
+sudo apt install nodejs
+```
+
+4. Instala o NPM
+```bash
+sudo apt install npm
+```
+
+5. Instala todas as dependências listadas no arquivo `package.json`. 
+```bash
+npm install
+```
+6. Este comando utiliza o NPM para instalar globalmente (`-g`) o Angular CLI.
+```bash
+sudo npm -g i @angular/cli
+```
+8. Este comando é usado para iniciar a aplicação. 
+
+```bash
+npm start
+```
+
+9. Navegue até ```http://localhost:4200/ ``` para visualizar a aplicação.
 
 
-Tendo como base um sistema Java Web feito com o Spring Boot REST que pude implementar servindo como back-end:
-https://github.com/JamesCode-Ts/API-em-Rest-com-Restful-EAD
+## Tecnologias utilizadas:
 
-Tecnologias Utilizadas:
+* #### Angular 8
 
-Angular 8
+* #### BootStrap
 
-BootStrap
+* #### TypeScript
+  
+* #### charts.js
 
-TypeScript
 
-charts.js
+
+#### Tendo como base um sistema Java Web feito com o Spring Boot REST que pude implementar servindo como back-end:
+
+#### Link: [API em Rest com Restful - Back-end](https://github.com/JamesCode-Ts/API-em-Rest-com-Restful-EAD)
+
+
 
 
 
